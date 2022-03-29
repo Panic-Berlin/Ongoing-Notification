@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:layout_marginTop="@dimen/margin_l"
+        android:layout_marginStart="@dimen/margin_l"
+        android:id="@+id/pb_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateOnly="false"
+        tools:progress="50"
+        android:progressDrawable="@drawable/progress_bar_background" />
+
+    <TextView
+        android:id="@+id/tv_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/pb_percent"
+        android:layout_alignTop="@id/pb_percent"
+        android:layout_alignEnd="@id/pb_percent"
+        android:layout_alignBottom="@+id/pb_percent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_xs"
+        tools:text="50%" />
+
+    <TextView
+        android:id="@+id/tv_boost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pb_percent"
+        android:layout_alignStart="@+id/pb_percent"
+        android:layout_alignEnd="@+id/pb_percent"
+        android:text="@string/boost"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/iv_boost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_boost"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_l"
+        android:layout_toEndOf="@+id/pb_percent"
+        android:src="@drawable/ic_boost" />
+
+    <ImageView
+        android:id="@+id/iv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_boost"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_l"
+        android:layout_toEndOf="@+id/iv_boost"
+        android:src="@drawable/ic_messengers" />
+
+    <ImageView
+        android:id="@+id/iv_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_boost"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_l"
+        android:layout_toEndOf="@+id/iv_message"
+        android:src="@drawable/ic_clean" />
+
+    <ImageView
+        android:id="@+id/iv_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_boost"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_l"
+        android:layout_toEndOf="@+id/iv_clean"
+        android:src="@drawable/ic_app_manager" />
+
+</RelativeLayout>
